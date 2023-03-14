@@ -8,10 +8,10 @@ public class MainFrame extends JFrame{
     private JLabel IDLabel;
     private JTextField IDTextField;
     private JPanel mainPanel;
-    private JTextField textField1;
-    private JTextArea descriptionIsShownHereTextArea1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField getWeightField;
+    private JTextArea containerDescriptionField;
+    private JTextField remitentCompanyField;
+    private JTextField receiverCompanyField;
     private JComboBox comboBox1;
     private JRadioButton a1RadioButton;
     private JCheckBox checkBox1;
@@ -38,6 +38,10 @@ public class MainFrame extends JFrame{
         pileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            Container container = new Container();
+            container.setIDNumber(Integer.parseInt(IDTextField.getText()));
+            descriptionIsShownHereTextArea.append(IDTextField.getText());
+            descriptionIsShownHereTextArea.append("; "+getWeightField.getText());
 
             }
         });
@@ -45,5 +49,9 @@ public class MainFrame extends JFrame{
 
     public static void main(String[] args) {
         MainFrame mainFrame= new MainFrame();
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

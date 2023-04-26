@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PortManagement">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/PortManagement.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

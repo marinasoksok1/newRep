@@ -18,6 +18,8 @@ public class Container {
     String plan;
     String description;
 
+    public Container() {
+    }
 
     public Container(int containerID) {
         this.containerID = containerID;
@@ -47,6 +49,7 @@ public class Container {
     public void setInspected(boolean inspected) {
         isInspected = inspected;
     }
+
 
     public void setContentPriority(String contentPriority) {
         this.contentPriority = contentPriority;
@@ -80,11 +83,40 @@ public class Container {
         return containerID;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getContentPriority() {
+        return contentPriority;
+    }
+
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
     public void setPriority(int priority) {
         this.priority = priority;
     }
     void setInspection(boolean inspected) {
         isInspected = inspected;
+    }
+
+    public boolean isInspected() {
+        return isInspected;
     }
 
     //method to get data from the container

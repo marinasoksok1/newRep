@@ -60,10 +60,10 @@ public class MainFrame extends JFrame {
                 descriptionIsShownHereTextArea.append("; " + getWeightField.getText());
                 Container container = new Container(Integer.parseInt(IDTextField.getText()));
                 container.setWeight(Integer.parseInt(getWeightField.getText()));
-                descriptionIsShownHereTextArea.append("; " + remitentCompanyField.getText());
-                descriptionIsShownHereTextArea.append("; " + receiverCompanyField.getText());
+                descriptionIsShownHereTextArea.append("; " + remitentCompanyField.getText() + "\n");
+                descriptionIsShownHereTextArea.append("; " + receiverCompanyField.getText() + "\n");
                 container.setDescription(containerDescriptionField.getText());
-                descriptionIsShownHereTextArea.append(containerDescriptionField.getText());
+                descriptionIsShownHereTextArea.append(containerDescriptionField.getText() + "\n");
                 if (a1RadioButton.isSelected()) {
                     container.setPriority(1);
                     descriptionIsShownHereTextArea.append("; " + "Priority 1");
@@ -86,7 +86,9 @@ public class MainFrame extends JFrame {
                     exception.printStackTrace();
                 }
                 descriptionIsShownHereTextArea.setVisible(true);
+                a1TextArea.setText(hub.toString());
             }
+
         });
         checkBox1.addItemListener(new ItemListener() {
             @Override
